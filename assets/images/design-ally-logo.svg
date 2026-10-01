@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" role="img" aria-labelledby="title">
+  <title id="title">Design Ally</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#cd3c6f"/>
+      <stop offset="1" stop-color="#ffc13a"/>
+    </linearGradient>
+  </defs>
+  <path d="M6 40 34 12 62 40 34 68Z" fill="none" stroke="url(#accent)" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m23 49 11-24 11 24m-17-8h12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="78" y="51" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="700" letter-spacing="-1">Design <tspan fill="#ffc13a">Ally</tspan></text>
+</svg>
