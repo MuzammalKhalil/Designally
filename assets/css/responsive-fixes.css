@@ -4,9 +4,51 @@ body { min-width: 0; }
 img, video { max-width: 100%; }
 iframe { max-width: 100%; }
 .row > * { min-width: 0; }
+.get-consultancy .consultancy-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+.get-consultancy .consultancy-phone,
+.get-consultancy .consultancy-whatsapp { display: flex; align-items: center; gap: 10px; }
+.get-consultancy .consultancy-phone-lines { display: flex; flex-direction: column; align-items: flex-start; }
+.get-consultancy .consultancy-numbers img { width: 28px; height: 28px; margin-right: 0; flex-shrink: 0; }
+.get-consultancy .consultancy-numbers a { color: #fff; font-size: 17px; white-space: nowrap; }
+.get-consultancy .consultancy-whatsapp .fa-whatsapp { font-size: 28px; width: 28px; height: 28px; line-height: 28px; text-align: center; flex-shrink: 0; }
+@media (min-width: 1200px) {
+  .get-consultancy .row { align-items: center; }
+  .get-consultancy .row > .col-sm-4:nth-child(1) { flex: 0 0 30%; max-width: 30%; }
+  .get-consultancy .row > .col-sm-4:nth-child(2) { flex: 0 0 46%; max-width: 46%; }
+  .get-consultancy .row > .col-sm-4:nth-child(3) { flex: 0 0 24%; max-width: 24%; }
+  .get-consultancy h5 { font-size: 28px; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .get-consultancy .row > .col-sm-4 { flex: 0 0 100%; max-width: 100%; margin-bottom: 16px; }
+  .get-consultancy h5 { text-align: center; }
+}
 p, address, .privacy li { overflow-wrap: anywhere; }
-header .logo { width: 240px; height: auto; }
-.ftr-sec img.footer-logo { width: 260px; height: auto; }
+header .brand-text, .ftr-sec .brand-text {
+  display: inline-block;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.ftr-sec .brand-text { margin-bottom: 15px; }
+@media (max-width: 1199px) {
+  header .brand-text, .ftr-sec .brand-text { font-size: 38px; }
+}
+@media (max-width: 479px) {
+  header .brand-text, .ftr-sec .brand-text { font-size: 34px; }
+}
+header .logo { width: 270px; max-width: 100%; height: auto; }
+.ftr-sec img.footer-logo { width: 270px; max-width: 100%; height: auto; }
 .our-banner h1 { font-size: clamp(28px, 4.8vw, 70px); line-height: 1.15; }
 .our-banner:not(.inner-banner) { height: auto; min-height: 650px; min-height: max(650px, 100svh); }
 .our-banner:not(.inner-banner) .caption { position: relative; height: auto; min-height: 650px; min-height: max(650px, 100svh); padding: 150px 0 70px; }
@@ -32,7 +74,7 @@ header .logo { width: 240px; height: auto; }
   header > .container > .row { position: relative; align-items: center; }
   header > .container > .row > .col-sm-3 { flex: 0 0 75%; max-width: 75%; }
   header > .container > .row > .col-sm-9 { position: static; flex: 0 0 25%; max-width: 25%; }
-  header .logo { width: 210px; max-width: 100%; top: 0; }
+  header .logo, .ftr-sec img.footer-logo { width: 210px; max-width: 100%; top: 0; }
   .menu-bottom, .menu-bottom.click { display: block; width: 44px; height: 44px; padding: 10px 7px; position: absolute; right: 15px; top: 4px; z-index: 10001; }
   .menu-bottom span { display: block; height: 3px; width: 100%; background: white; margin-bottom: 6px; transition: transform .2s; }
   .menu-bottom.click span:nth-child(1) { transform: translateY(9px) rotate(45deg); width: 100%; top: 0; }
@@ -102,7 +144,7 @@ header .logo { width: 240px; height: auto; }
   .get-consultancy .row > [class*="col-"] { flex: 0 0 100%; max-width: 100%; margin-bottom: 16px; }
   .get-consultancy p a { font-size: 17px; }
   .ftr-sec .row > .col-sm-4 { flex: 0 0 100%; max-width: 100%; margin-bottom: 24px; }
-  .ftr-sec img.footer-logo { max-width: 240px; width: 100%; }
+  .ftr-sec img.footer-logo { max-width: 100%; width: 210px; }
   .ftr-sec p, .ftr-sec li a { font-size: 14px; }
   .popupform .custom-form .row { margin: 0; }
   .popupform .custom-form .col-md-6 { flex: 0 0 100%; max-width: 100%; }
@@ -124,7 +166,7 @@ header .logo { width: 240px; height: auto; }
 
 @media (max-width: 479px) {
   .container { padding-left: 18px; padding-right: 18px; }
-  header .logo { width: 185px; }
+  header .logo, .ftr-sec img.footer-logo { width: 185px; }
   .new-pf .element-item { width: 100%; margin-left: 0; margin-right: 0; }
   .our-banner.inner-banner, .our-banner.inner-banner > img { min-height: 460px; }
   .our-banner.inner-banner > img { height: 460px; }
