@@ -65,7 +65,49 @@ header .logo { width: 270px; max-width: 100%; height: auto; }
 
 @media (min-width: 1200px) {
   .menu-bottom { display: none; }
-  .dropdown-menu { min-width: 0; width: min(816px, calc(100vw - 60px)); left: auto; right: 0; }
+  header .main-menu { position: relative; }
+  header .menu > .dropdown { position: static; }
+  header .dropdown-menu {
+    min-width: 0;
+    width: min(816px, calc(100vw - 60px));
+    left: 0 !important;
+    right: auto !important;
+    top: calc(100% + 12px) !important;
+    transform: none !important;
+    margin-top: 0;
+    height: auto;
+    padding: 0;
+    background: #fff;
+    overflow: visible;
+    display: none !important;
+    z-index: 1000;
+    box-shadow: 0 8px 20px #00000020;
+  }
+  /* Keep the pointer inside the menu while crossing the gap below Services. */
+  header .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    border: 0;
+  }
+  header .dropdown:hover > .dropdown-menu,
+  header .dropdown:focus-within > .dropdown-menu,
+  header .dropdown-menu.show { display: block !important; height: auto; }
+  header .dropdown:hover > .dropdown-toggle,
+  header .dropdown:focus-within > .dropdown-toggle { color: #007bff; }
+  header .dropdown-menu > .row { display: flex; margin: 0; min-height: 300px; }
+  header .dropdown-menu > .row > .col-sm-6:first-child { flex: 0 0 42%; max-width: 42%; padding: 0; }
+  header .dropdown-menu .sub-image { display: block; width: 100%; height: 300px; object-fit: cover; object-position: left center; }
+  header .dropdown-menu > .row > .col-sm-6:last-child { flex: 0 0 58%; max-width: 58%; padding: 18px 20px 18px 14px; }
+  header .dropdown-menu ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; margin: 0; padding: 0; list-style: none; }
+  header .dropdown-menu ul li { display: block; width: auto; margin: 0; min-width: 0; }
+  header .dropdown-menu ul li a { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0; color: #002c69; font-size: 13px; font-weight: 400; white-space: nowrap; }
+  header .dropdown-menu ul li a img { width: 25px; height: 25px; object-fit: contain; margin: 0; flex-shrink: 0; }
+  header .dropdown-menu ul li a:hover,
+  header .dropdown-menu ul li a:focus-visible { color: #007bff; }
 }
 
 @media (max-width: 1199px) {
